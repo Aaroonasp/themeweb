@@ -186,3 +186,9 @@ section#gallery1 h2, section#gallery2 h2 {
     from {transform:scale(0)}
     to {transform:scale(1)}
 }
+
+.logo img {
+    height: 50px; /* Set a fixed height for the logo */
+    width: auto;  /* Allow width to adjust to maintain aspect ratio */
+    vertical-align: middle; /* Helps align image properly if there's any surrounding inline content or weird spacing */
+}
