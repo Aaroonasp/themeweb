@@ -5,6 +5,14 @@ body {
     font-family: sans-serif;
 }
 
+/* Main container for centering content */
+.main-container {
+    max-width: 1200px; /* Adjust as needed, sets a max width for content */
+    margin: 0 auto; /* Centers the block on the page */
+    padding: 0 15px; /* Adds some padding on the sides */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
 /* Header styling */
 header {
     display: flex;
@@ -58,13 +66,36 @@ h2 {
     margin-top: 0; /* Removes default top margin from h2 elements within sections */
 }
 
+/* Text Sections Centering (About, Contact) */
+section#about, section#contact {
+    text-align: center; /* Centers inline content (text, images, etc.) */
+}
+
+/* If h2 elements in these sections should also be centered (they are block by default) */
+section#about h2, section#contact h2 {
+    /* text-align: center; is inherited. If specific margin adjustments were needed: */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+}
+
+/* Gallery Sections Centering */
+section#gallery1, section#gallery2 {
+    text-align: center; /* This will center the inline-block .thumbnail-container elements */
+}
+
+/* Ensure h2 within gallery sections are also centered */
+section#gallery1 h2, section#gallery2 h2 {
+   /* text-align: center; is inherited */
+}
+
+
 /* Thumbnail container styling */
 .thumbnail-container {
     display: inline-block; /* Align thumbnails in a row */
     margin: 10px;
     border: 1px solid #ddd;
     padding: 5px;
-    text-align: center;
+    text-align: center; /* This was already here, good for button inside */
     background-color: #f9f9f9;
 }
 
