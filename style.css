@@ -57,3 +57,101 @@ section:last-child {
 h2 {
     margin-top: 0; /* Removes default top margin from h2 elements within sections */
 }
+
+/* Thumbnail container styling */
+.thumbnail-container {
+    display: inline-block; /* Align thumbnails in a row */
+    margin: 10px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.thumbnail-container img {
+    width: 150px; /* Fixed width for thumbnails */
+    height: 150px; /* Fixed height for thumbnails */
+    object-fit: cover; /* Ensure images cover the area, might crop */
+    display: block;
+    margin-bottom: 5px;
+}
+
+.thumbnail-container .popup-trigger {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.thumbnail-container .popup-trigger:hover {
+    background-color: #0056b3;
+}
+
+/* Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+    padding-top: 60px; /* Location of the box */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Close Button */
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Add Animation (optional) */
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
