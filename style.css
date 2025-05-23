@@ -1,0 +1,59 @@
+/* Basic body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between; /* Aligns logo to the left and nav to the right */
+    align-items: center; /* Vertically aligns items in the center */
+    padding: 10px 20px; /* Adds some padding inside the header */
+    background-color: #f0f0f0; /* Light grey background for the header */
+    border-bottom: 1px solid #ccc; /* Adds a bottom border to the header */
+}
+
+/* Logo styling */
+.logo {
+    font-size: 1.5em; /* Makes the logo text larger */
+    font-weight: bold;
+}
+
+/* Navigation styling */
+nav ul {
+    list-style-type: none; /* Removes default list bullets */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Makes list items appear in a row */
+}
+
+nav ul li {
+    margin-left: 20px; /* Adds some space between menu items */
+}
+
+nav ul li a {
+    text-decoration: none; /* Removes underline from links */
+    color: #333; /* Sets link color */
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #007bff; /* Changes link color on hover */
+}
+
+/* Section styling */
+section {
+    padding: 20px; /* Adds padding inside each section */
+    margin-top: 20px; /* Adds space above each section */
+    border-bottom: 1px solid #eee; /* Adds a light border below sections */
+}
+
+section:last-child {
+    border-bottom: none; /* Removes border from the last section */
+}
+
+h2 {
+    margin-top: 0; /* Removes default top margin from h2 elements within sections */
+}
