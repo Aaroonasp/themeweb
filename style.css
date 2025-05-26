@@ -1,0 +1,194 @@
+/* Basic body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* Main container for centering content */
+.main-container {
+    max-width: 1200px; /* Adjust as needed, sets a max width for content */
+    margin: 0 auto; /* Centers the block on the page */
+    padding: 0 15px; /* Adds some padding on the sides */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between; /* Aligns logo to the left and nav to the right */
+    align-items: center; /* Vertically aligns items in the center */
+    padding: 10px 20px; /* Adds some padding inside the header */
+    background-color: #f0f0f0; /* Light grey background for the header */
+    border-bottom: 1px solid #ccc; /* Adds a bottom border to the header */
+}
+
+/* Logo styling */
+.logo {
+    font-size: 1.5em; /* Makes the logo text larger */
+    font-weight: bold;
+}
+
+/* Navigation styling */
+nav ul {
+    list-style-type: none; /* Removes default list bullets */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Makes list items appear in a row */
+}
+
+nav ul li {
+    margin-left: 20px; /* Adds some space between menu items */
+}
+
+nav ul li a {
+    text-decoration: none; /* Removes underline from links */
+    color: #333; /* Sets link color */
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #007bff; /* Changes link color on hover */
+}
+
+/* Section styling */
+section {
+    padding: 20px; /* Adds padding inside each section */
+    margin-top: 20px; /* Adds space above each section */
+    border-bottom: 1px solid #eee; /* Adds a light border below sections */
+}
+
+section:last-child {
+    border-bottom: none; /* Removes border from the last section */
+}
+
+h2 {
+    margin-top: 0; /* Removes default top margin from h2 elements within sections */
+}
+
+/* Text Sections Centering (About, Contact) */
+section#about, section#contact {
+    text-align: center; /* Centers inline content (text, images, etc.) */
+}
+
+/* If h2 elements in these sections should also be centered (they are block by default) */
+section#about h2, section#contact h2 {
+    /* text-align: center; is inherited. If specific margin adjustments were needed: */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+}
+
+/* Gallery Sections Centering */
+section#gallery1, section#gallery2 {
+    text-align: center; /* This will center the inline-block .thumbnail-container elements */
+}
+
+/* Ensure h2 within gallery sections are also centered */
+section#gallery1 h2, section#gallery2 h2 {
+   /* text-align: center; is inherited */
+}
+
+
+/* Thumbnail container styling */
+.thumbnail-container {
+    display: inline-block; /* Align thumbnails in a row */
+    margin: 10px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    text-align: center; /* This was already here, good for button inside */
+    background-color: #f9f9f9;
+}
+
+.thumbnail-container img {
+    width: 150px; /* Fixed width for thumbnails */
+    height: 150px; /* Fixed height for thumbnails */
+    object-fit: cover; /* Ensure images cover the area, might crop */
+    display: block;
+    margin-bottom: 5px;
+}
+
+.thumbnail-container .popup-trigger {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.thumbnail-container .popup-trigger:hover {
+    background-color: #0056b3;
+}
+
+/* Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+    padding-top: 60px; /* Location of the box */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Close Button */
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Add Animation (optional) */
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+.logo img {
+    height: 50px; /* Set a fixed height for the logo */
+    width: auto;  /* Allow width to adjust to maintain aspect ratio */
+    vertical-align: middle; /* Helps align image properly if there's any surrounding inline content or weird spacing */
+}

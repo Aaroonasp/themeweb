@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Page Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <div class="logo">
+                <img src="images/logo.png" alt="Company Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>This is the about section. More content will go here.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>This is the contact section. Contact details will go here.</p>
+        </section>
+
+        <section id="gallery1">
+            <h2>Image Gallery 1</h2>
+            <div class="thumbnail-container">
+                <img src="images/thumbs/beach_ball_1_thumb.jpg" alt="Nature - Thumbnail" data-large-src="images/beach_ball_1.jpg">
+                <button class="popup-trigger">View Image</button>
+            </div>
+            <div class="thumbnail-container">
+                <img src="images/gallery_city_thumb.png" alt="Cityscape - Thumbnail" data-large-src="images/gallery_city_large.png">
+                <button class="popup-trigger">View Image</button>
+            </div>
+        </section>
+
+        <section id="gallery2">
+            <h2>Image Gallery 2</h2>
+            <div class="thumbnail-container">
+                <img src="images/gallery_animals_thumb.png" alt="Animals - Thumbnail" data-large-src="images/gallery_animals_large.png">
+                <button class="popup-trigger">View Image</button>
+            </div>
+            <div class="thumbnail-container">
+                <img src="images/gallery_food_thumb.png" alt="Food - Thumbnail" data-large-src="images/gallery_food_large.png">
+                <button class="popup-trigger">View Image</button>
+            </div>
+        </section>
+
+        <!-- The Modal -->
+        <div id="imageModal" class="modal">
+            <span class="close-button">&times;</span>
+            <img class="modal-content" id="modalImage">
+            <div id="caption"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
